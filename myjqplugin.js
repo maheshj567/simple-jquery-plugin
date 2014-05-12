@@ -1,6 +1,6 @@
 ( function ($)
 {
-	// Extend "$.fn" object. Your code will call "$('#css-selector').myJQPlugin" to instantiate the plugin.
+	// Extend "$.fn" object. Your code will call "$('#css-selector').myJQPlugin({opt1: 'value'})" to instantiate the plugin.
 	$.fn.myJQPlugin = function(options)
 	{
 		// options can be null here
