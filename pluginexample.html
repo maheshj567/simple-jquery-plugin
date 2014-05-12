@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>myJQPlugin sample implementation into a HTML file</title>
+    </head>
+    <body>
+    	<div id="myDiv"></div>
+    	<div id="myOtherDiv"></div>
+    	
+    	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    	<script type="text/javascript" src="./myjqplugin.js"></script>
+    	
+    	<script>
+    		// Override plugin default foreground color
+	        $.fn.myJQPlugin.defaults.foo = "baaaaar";
+	         
+	        // ...
+	         
+	        // Invoke plugin using new defaults
+	        $( "#myDiv" ).myJQPlugin();
+	         
+	        // ...
+	         
+	        // Override default by passing options to plugin method
+	        // You can even provide additional options in the same object
+	        // They'll be either used or ignored based on the plugin's implementation
+	        $( "#myOtherDiv" ).myJQPlugin({
+	            foo: "hi..."
+	        });
+    	</script>
+    </body>
+</html>
